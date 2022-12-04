@@ -4,7 +4,7 @@ import { getInput } from "../utils/index.ts";
 
 const { assertEquals } = Rhum.asserts;
 
-Rhum.testPlan("Advent of Code - Day Twp", () => {
+Rhum.testPlan("Advent of Code - Day Two", () => {
   const example = [
     ["A", "Y"],
     ["B", "X"],
@@ -15,6 +15,7 @@ Rhum.testPlan("Advent of Code - Day Twp", () => {
     Rhum.testCase("should get 15", () => {
       assertEquals(part1(example), 15);
     });
+
     Rhum.testCase("should get 10816", async () => {
       const input = (await getInput("day2")).split("\n").map((round) => round.split(" "));
       assertEquals(part1(input), 10816);
