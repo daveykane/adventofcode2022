@@ -1,7 +1,7 @@
 const findMarker = (buffer: string, length: number): number | undefined => {
-  for (let i = 0; i < buffer.length - length - 1; i++) {
-    if ([...new Set(buffer.substring(i, i + length).split(""))].length === length) {
-      return i + length;
+  for (let i = length - 1; i < buffer.length; i++) {
+    if ([...new Set(buffer.substring(i, i - length).split(""))].length === length) {
+      return i;
     }
   }
 };
